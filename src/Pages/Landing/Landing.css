@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap');
+
+.App {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    margin-bottom: 10vh;
+}
+
+.App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+span {
+    color: #FF2C2C;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.Title{
+    font-family: 'Manrope', sans-serif;
+    font-style:normal;
+    font-weight: bolder;
+    width: 70%;
+}
+
+.Explain{
+    width: 65%;
+    font-weight: 300;
+    opacity: 50%;
+    font-size: 16px;
+    margin-top: -2vh;
+    margin-bottom: 4vh;
+}
+
+html{
+    background-image: url("../../assets/Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Explain{
+        width: 85%;
+    }
+
+    .Title{
+        width: 90%;
+    }
+}
