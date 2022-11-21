@@ -5,7 +5,7 @@ class decoration_corner extends Component {
     render() {
         const {} = this.props;
         return (
-            <div className="corner-decoration">
+            <div className={'corner-decoration '+ this.props.additional_class}>
 
             </div>
         );

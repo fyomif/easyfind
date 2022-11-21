@@ -1,18 +1,64 @@
-import React, {PropTypes, Component} from 'react';
-import './App.css';
+import { Form } from "react-bootstrap";
+import { useState } from "react";
 
+export const SingleQuestion =  ({ item, onChange, answer })  => {
+    const [currentValue, setCurrentValue] = useState(answer || null);
 
-class SingleQuestion extends Component {
-    render() {
-        const {} = this.props;
-        return (
-            <div>
-
-            </div>
-        );
+    const handleChange = (value) => {
+        setCurrentValue(value);
+        onChange(value, item.value);
     }
-}
 
-SingleQuestion.propTypes = {};
-
-export default SingleQuestion;
+    switch (item.type) {
+        case 'text':
+            return (
+                <>
+                    <Form.Label>{item.label}</Form.Label>
+                    <Form.Control
+                        type="text"
+                        id={item.label}
+                        onChange={(e) => handleChange(e.target.value, item.value)}
+                        value={currentValue}
+                    />
+                </>
+            )
+            break;
+        case 'password':
+            return (
+                <>
+                    <Form.Label htmlFor="inputPassword5">{item.label}</Form.Label>
+                    <Form.Control
+                        type="password"
+                        id="inputPassword5"
+                        aria-describedby="passwordHelpBlock"
+                        onChange={(e) => onChange(e.target.value, item.value)}
+                    />
+                </>
+            )
+            break;
+        case 'information':
+            return (
+                <p>
+                    {item.label}
+                </p>
+            )
+        case 'select':
+            return (
+                <div className="mt-2">
+                    <Form.Select aria-label={item.label} onChange={(e) => onChange(e.target.value, item.value)}>
+                        <option>{item.label}</option>
+                        {
+                            item.options.map((opt, index) => {
+                                return (
+                                    <option value={opt}>{opt}</option>
+                                )
+                            })
+                        }
+                    </Form.Select>
+                </div>
+            )
+            return (
+                <></>
+            )
+    }
+};

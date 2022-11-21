@@ -6,6 +6,8 @@ import * as serviceWorker from "./serviceWorker";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Landing from "./Pages/Landing/Landing";
 import Home_page from "./Pages/Home/Home_page";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

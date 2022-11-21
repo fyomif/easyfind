@@ -1,0 +1,36 @@
+.HomePage .Title{
+    margin-top: 2rem;
+}
+
+.HomePage{
+    display: flex;
+    justify-content: flex-start;
+    background: none;
+}
+
+.HomePage .App-logo {
+    height: 7vmin;
+    pointer-events: none;
+    margin-bottom: 6rem;
+}
+.HomePage .container{
+    margin-right: 0;
+    margin-left: 3rem;
+}
+
+.HomePage .m-5{
+    margin: 3rem 0 !important;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .HomePage .container{
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+}

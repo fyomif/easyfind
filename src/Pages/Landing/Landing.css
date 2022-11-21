@@ -3,7 +3,10 @@
 .App {
     text-align: center;
     font-family: 'Manrope', sans-serif;
-
+    background-image: url("../../assets/Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .App-logo {
@@ -62,6 +65,7 @@ html{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Manrope', sans-serif;
